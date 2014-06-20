@@ -24,22 +24,22 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.beer-index', {
+      url: '/beers',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'beers-tab': {
+          templateUrl: 'templates/beer-index.html',
+          controller: 'BeerIndexCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.beer-detail', {
+      url: '/beer/:beerId',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'beers-tab': {
+          templateUrl: 'templates/beer-detail.html',
+          controller: 'BeerDetailCtrl'
         }
       }
     })
@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/beers');
 
 });
 
